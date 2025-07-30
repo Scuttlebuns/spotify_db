@@ -1,0 +1,38 @@
+# macOS
+.DS_Store
+
+# SQL and data backups
+*.sql~
+*.bak
+*.backup
+
+# Node/npm (if used for visuals or tooling)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# VSCode settings
+.vscode/
+
+# Python virtual environments (if applicable)
+venv/
+__pycache__/
+*.py[cod]
+
+# OS metadata
+Icon?
+._*
+
+# Logs
+*.log
+
+# System files
+Thumbs.db
+desktop.ini
+
+# Environment variables
+.env
+
+# Jupyter notebooks (optional)
+.ipynb_checkpoints/

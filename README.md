@@ -1,4 +1,4 @@
-# Music Data Exploration Project
+# Spotify Data Exploration Project
 
 ## Project Overview
 This project centers on designing and implementing a relational database using real-world music-related datasets. Using structured data from Spotify and artist popularity records, we explore how relational models, normalization, and SQL queries can uncover insights into music trends, artist influence, and audio characteristics.
@@ -30,8 +30,21 @@ All components are compiled into a final report and an accompanying in-class pre
 4. **Verify** the import worked:
    ```bash
    mysql -u root -e "USE spotify_db; SHOW TABLES; SELECT COUNT(*) FROM artists; SELECT COUNT(*) FROM tracks;"
-
+   ```
 ---
+
+## Running Queries in MySQL Workbench
+
+To run and explore the included SQL queries (query.sql) using MySQL Workbench:
+1.    Open MySQL Workbench and connect to your local MySQL server.
+2.    Select the database by executing:
+    ```bash   
+    USE spotify_db;
+    ```
+2.    To run queries:
+    ```bash   
+    open the script file 'query.sql'
+    ```  
 
 ## Project Components
 
