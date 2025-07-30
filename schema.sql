@@ -1,57 +1,64 @@
--- 1) Drop and recreate the database
+-- schema.sql: Drop, create DB, tables, and load data
+
 DROP DATABASE IF EXISTS spotify_db;
 CREATE DATABASE spotify_db;
 USE spotify_db;
 
--- 2) Table schemas
+-- Drop tables if they exist
+DROP TABLE IF EXISTS tracks;
+DROP TABLE IF EXISTS artists;
 
+-- Create artists table (columns in CSV order)
 CREATE TABLE artists (
-  ID          VARCHAR(100) PRIMARY KEY,
-  Name        VARCHAR(255),
-  Gender      VARCHAR(50),
-  Age         INT,
-  Country     VARCHAR(100),
-  Genres      TEXT,
-  Popularity  INT,
-  Followers   INT,
-  URI         VARCHAR(255)
+    Name VARCHAR(255),
+    ID VARCHAR(100) PRIMARY KEY,
+    Gender VARCHAR(50),
+    Age INT,
+    Country VARCHAR(100),
+    Genres TEXT,
+    Popularity INT,
+    Followers INT,
+    URI VARCHAR(255)
 );
 
+-- Create tracks table (columns in CSV order, renamed 'key' to 'track_key')
 CREATE TABLE tracks (
-  genre            VARCHAR(100),
-  artist_name      VARCHAR(255),
-  track_name       VARCHAR(255),
-  track_id         VARCHAR(100) PRIMARY KEY,
-  popularity       INT,
-  acousticness     FLOAT,
-  danceability     FLOAT,
-  duration_ms      INT,
-  energy           FLOAT,
-  instrumentalness FLOAT,
-  track_key        INT,
-  liveness         FLOAT,
-  loudness         FLOAT,
-  mode             INT,
-  speechiness      FLOAT,
-  tempo            FLOAT,
-  time_signature   INT,
-  valence          FLOAT
+    genre            VARCHAR(100),
+    artist_name      VARCHAR(255),
+    track_name       VARCHAR(255),
+    track_id         VARCHAR(100) PRIMARY KEY,
+    popularity       INT,
+    acousticness     FLOAT,
+    danceability     FLOAT,
+    duration_ms      INT,
+    energy           FLOAT,
+    instrumentalness FLOAT,
+    track_key        INT,
+    liveness         FLOAT,
+    loudness         FLOAT,
+    mode             INT,
+    speechiness      FLOAT,
+    tempo            FLOAT,
+    time_signature   INT,
+    valence          FLOAT
 );
 
--- 3) Load data from CSVs (must be in same folder as this .sql)
+-- Enable loading local files
 SET GLOBAL local_infile = 1;
 
+-- Load data into artists
 LOAD DATA LOCAL INFILE 'US Top 10K Artists.csv'
 INTO TABLE artists
-FIELDS TERMINATED BY ',' 
+FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
-(ID, Name, Gender, Age, Country, Genres, Popularity, Followers, URI);
+(Name, ID, Gender, Age, Country, Genres, Popularity, Followers, URI);
 
+-- Load data into tracks
 LOAD DATA LOCAL INFILE 'Spotify Tracks DB.csv'
 INTO TABLE tracks
-FIELDS TERMINATED BY ',' 
+FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS

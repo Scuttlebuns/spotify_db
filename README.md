@@ -31,7 +31,7 @@ All components are compiled into a final report and an accompanying in-class pre
    ```bash
    mysql -u root -e "USE spotify_db; SHOW TABLES; SELECT COUNT(*) FROM artists; SELECT COUNT(*) FROM tracks;"
 
---
+---
 
 ## Project Components
 
