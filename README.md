@@ -13,6 +13,26 @@ All components are compiled into a final report and an accompanying in-class pre
 
 ---
 
+## Loading the Database
+
+1. **Clone the Repo**:
+   ```bash
+   git clone git@github.com:Scuttlebuns/spotify_db.git
+   ```
+2. **Open Terminal** and navigate to that folder:
+   ```bash
+   cd /path/to/spotify_db
+   ```
+3. **Run the schema script** to create tables and import data:
+   ```bash
+   mysql --local-infile=1 -u root < create_tables.sql
+   ```
+4. **Verify** the import worked:
+   ```bash
+   mysql -u root -e "USE spotify_db; SHOW TABLES; SELECT COUNT(*) FROM artists; SELECT COUNT(*) FROM tracks;"
+
+--
+
 ## Project Components
 
 ### 1. Dataset Selection
