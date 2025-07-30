@@ -25,7 +25,7 @@ All components are compiled into a final report and an accompanying in-class pre
    ```
 3. **Run the schema script** to create tables and import data:
    ```bash
-   mysql --local-infile=1 -u root < create_tables.sql
+   mysql --local-infile=1 -u root < schema.sql
    ```
 4. **Verify** the import worked:
    ```bash
