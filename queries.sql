@@ -75,3 +75,18 @@ SELECT genre, ROUND(AVG(duration_ms)/1000, 1) AS avg_duration_sec
 FROM tracks
 GROUP BY genre
 ORDER BY avg_duration_sec DESC;
+
+-- 13. Most common track keys by genre
+SELECT t.genre, t.track_key, COUNT(*) AS count
+FROM tracks t
+JOIN artists a ON t.artist_name = a.Name
+GROUP BY t.genre, t.track_key
+ORDER BY count DESC
+LIMIT 10;
+
+-- 14. Average energy by track key
+SELECT t.track_key, ROUND(AVG(t.energy), 3) AS avg_energy
+FROM tracks t
+JOIN artists a ON t.artist_name = a.Name
+GROUP BY t.track_key
+ORDER BY avg_energy DESC;
