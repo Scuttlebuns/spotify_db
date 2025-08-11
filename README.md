@@ -50,7 +50,7 @@ To run and explore the included SQL queries (query.sql) using MySQL Workbench:
 
 ### 1. Dataset Selection
 
-We selected two music datasets from Kaggle that offer strong join potential and rich metadata:
+I selected two music datasets from Kaggle that offer strong join potential and rich metadata:
 
 - **Spotify Dataset for SQL Practice**  
   Source: [Kaggle – ambaliyagati](https://www.kaggle.com/datasets/ambaliyagati/spotify-dataset-for-playing-around-with-sql)  
@@ -74,16 +74,11 @@ We selected two music datasets from Kaggle that offer strong join potential and 
 - **Normalization**: All tables are normalized to 3NF to reduce redundancy and ensure consistency.
 - **Implementation**: SQL scripts create all tables and relationships in MySQL.
 
-Deliverables:
-- A clear E/R diagram
-- SQL schema as code blocks or appendix
-- A 1–2 page written explanation of design and normalization decisions
-
 ---
 
 ### 3. Data Exploration and Insights
 
-We wrote and executed 10–15 SQL queries that demonstrate the usefulness of the system. These include:
+I wrote and executed 10–15 SQL queries that demonstrate the usefulness of the system. These include:
 - Joins between artist and track datasets
 - Aggregations (e.g., averages, totals)
 - Subqueries for filtering and comparisons
@@ -96,29 +91,10 @@ The queries aim to provide meaningful insights, such as:
 
 ---
 
-### 4. Presentation and Documentation
+##  Deliverables
 
-Final submission includes:
-- A professional report in PDF format containing all required components
-- A short 7–10 minute presentation summarizing:
-  - Dataset rationale
-  - Key aspects of the database design
-  - 2–3 notable insights from the analysis
-
----
-
-## Final Deliverables
-
-- Final Project Report (PDF)
-- Presentation Slides (PDF or PPT)
-
----
-
-## Collaboration and Integrity
-
-- Team size: up to 3 students
-- All work must be original
-- If a team, the report includes a breakdown of each member’s contributions
+- Project Report (PDF)
+- Presentation Slides (PDF)
 
 ---
 
@@ -128,7 +104,3 @@ Final submission includes:
 - [US Top 10K Artists and Their Popular Songs](https://www.kaggle.com/datasets/spoorthiuk/us-top-10k-artists-and-their-popular-songs)
 
 ---
-
-## Due Date
-
-August 4, 2025
